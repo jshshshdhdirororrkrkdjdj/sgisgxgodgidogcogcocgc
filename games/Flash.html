@@ -3,14 +3,13 @@
   <head>
     <script
       defer
-      data-domain="sz-games.github.io"
+      data-domain="hwugifijifjjhijsoohsoohhdhosjijihfijo.netlify.app"
       src="https://stats.senty.com.au/js/script.outbound-links.pageview-props.tagged-events.js"
     ></script>
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3723218062742398"
       crossorigin="anonymous"
-      data-ad-channel="9267153333"
     ></script>
     <script>
       window.plausible =
@@ -87,11 +86,11 @@
 
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('https://sz-games.github.io/service-worker.js')
+        navigator.serviceWorker.register('https://hwugifijifjjhijsoohsoohhdhosjijihfijo.netlify.app/service-worker.js')
       }
     </script>
 
-    <link rel="manifest" href="https://sz-games.github.io/manifest.json" />
+    <link rel="manifest" href="https://hwugifijifjjhijsoohsoohhdhosjijihfijo.netlify.app/manifest.json" />
     <style>
       body {
         margin: 0;
@@ -506,7 +505,7 @@
       <span
         class="material-icons buttonForMenu"
         style="margin: 5px"
-        onclick="window.location = 'https://sz-games.github.io'"
+        onclick="window.location = 'https://hwugifijifjjhijsoohsoohhdhosjijihfijo.netlify.app/'"
       >
         arrow_back
       </span>
@@ -625,6 +624,40 @@
         // Set the text of the element to the value of the "text" parameter
         textElement.src = currentUrl.searchParams.get('game')
       }
+      function showQuestion(index) {
+    document.getElementById('card').innerHTML = questions[index].q;
+}
+
+function showAnswer(index) {
+    document.getElementById('card').innerHTML = questions[index].a;
+}
+
+function nextQuestion() {
+    if (currentIndex < questions.length - 1) {
+        currentIndex++;
+        showQuestion(currentIndex);
+    }
+}
+
+function prevQuestion() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        showQuestion(currentIndex);
+    }
+}
+
+let currentIndex = 0;
+
+const questions = [
+    { q: "What is the capital of France?", a: "Paris" },
+    { q: "What is 2 + 2?", a: "4" },
+    { q: "What is the boiling point of water?", a: "100°C" }
+];
+
+window.onload = function() {
+    showQuestion(currentIndex);
+}
+
     </script>
     <script>
       googletag.cmd.push(function () {
