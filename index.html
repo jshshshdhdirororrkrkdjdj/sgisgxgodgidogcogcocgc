@@ -207,68 +207,6 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-        <div class="container" id="passwordScreen">
-  <h2>Enter Password</h2>
-  <input type="password" id="passwordInput" placeholder="Password" />
-  <br />
-  <button onclick="checkPassword()">Submit</button>
-  <div id="message"></div>
-</div>
-
-<style>
-  .container {
-    font-family: Arial, sans-serif;
-    background: #2c2c2c;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    color: white;
-    max-width: 300px;
-    margin: 100px auto;
-  }
-
-  input[type="password"] {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-  }
-
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  #message {
-    margin-top: 15px;
-    font-weight: bold;
-  }
-</style>
-
-<script>
-  const correctPassword = "408263@";
-
-  function checkPassword() {
-    const input = document.getElementById("passwordInput").value;
-    const message = document.getElementById("message");
-
-    if (input === correctPassword) {
-      // Hide or remove the password screen
-      document.getElementById("passwordScreen").remove();
-    } else {
-      message.style.color = "red";
-      message.textContent = "Incorrect password. Try again.";
-    }
-  }
-</script>
     
     <div class="split">
       <div class="split-left">
